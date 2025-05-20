@@ -1,35 +1,61 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { VideoGame } from "./models/video-game";
+import VideoGameGrid from "./VideoGames/VideoGameGrid";
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+// layout -> display -> spacing -> border -> colors -> text
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+function App() {
+  const games: VideoGame[] = [
+    {
+      id: 1,
+      title: "Cyber Odyssey 2077",
+      subtitle: "Future Reality RPG",
+      description:
+        "Immerse yourself in a dystopian future where choices shape your destiny",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e",
+    },
+    {
+      id: 2,
+      title: "Medieval Legends",
+      subtitle: "Fantasy Adventure",
+      description:
+        "Explore vast kingdoms and battle mythical creatures in this epic journey",
+      image: "https://images.unsplash.com/photo-1580234811497-9df7fd2f357e",
+    },
+    {
+      id: 3,
+      title: "Space Warriors",
+      subtitle: "Sci-Fi Strategy",
+      description:
+        "Command your fleet and conquer the galaxy in this strategic space warfare",
+      image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5",
+    },
+    {
+      id: 4,
+      title: "Racing Evolution",
+      subtitle: "High-Speed Action",
+      description:
+        "Experience ultimate racing thrills with next-gen graphics and physics",
+      image: "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+    },
+    {
+      id: 5,
+      title: "Ninja Chronicles",
+      subtitle: "Action Adventure",
+      description: "Master ancient arts and defend your clan in feudal Japan",
+      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420",
+    },
+    {
+      id: 6,
+      title: "Monster Hunter X",
+      subtitle: "Action RPG",
+      description:
+        "Track and hunt magnificent creatures in a breathtaking open world",
+      image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
+    },
+  ];
+
+  return <VideoGameGrid games={games} />;
 }
 
 export default App;
