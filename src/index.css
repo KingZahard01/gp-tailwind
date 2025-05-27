@@ -56,6 +56,54 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Tailwind Elements */
+
+.title {
+    @apply text-white font-bold mb-4;
+}
+
+.subtitle {
+    @apply text-gray-300 text-lg mb-3;
+}
+
+.description {
+    @apply text-gray-400 text-sm;
+}
+
+.page-container  {
+    @apply min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.page-content {
+    @apply max-w-7xl mx-auto;
+}
+
+.grid-container {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+.card {
+    @apply bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105;
+}
+
+.card-image-container {
+    @apply relative h-48 overflow-hidden;
+}
+
+.card-overlay {
+    @apply absolute inset-0 bg-black opacity-0 flex items-center justify-center hover:opacity-50 transition;
+}
+
+.card-icon {
+    @apply text-4xl;
+}
+
+.card-content {
+    @apply p-6
+}
+
+
+
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;

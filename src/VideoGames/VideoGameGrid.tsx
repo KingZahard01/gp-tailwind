@@ -7,10 +7,10 @@ interface Props {
 
 const VideoGameGrid = ({ games }: Props) => {
   return (
-    <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-white font-bold">Featured Games</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="page-container">
+      <div className="page-content">
+        <h1 className="title">Featured Games</h1>
+        <div className="grid-container">
           {games.map((game) => (
             <GameItem key={game.id} {...game} />
           ))}
